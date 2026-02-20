@@ -3,6 +3,8 @@ import { NextResponse } from "next/server";
 import { stripe } from "@/lib/stripe";
 import { auth } from "@/auth";
 
+export const dynamic = 'force-dynamic';
+
 const PRICES = {
     starter: 350, // £3.50
     plus: 699,    // £6.99
