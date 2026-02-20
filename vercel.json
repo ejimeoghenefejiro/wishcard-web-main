@@ -1,0 +1,10 @@
+{
+  "buildCommand": "pnpm build",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "env": {
+    "NEXT_PUBLIC_API_URL": "https://3000-inn7pp81usvihey98q5f7-d3b0b107.us2.manus.computer"
+  }
+}
