@@ -3,13 +3,20 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '**',
+        protocol: "https",
+        hostname: "**",
       },
     ],
   },
-  experimental: {
-    optimizePackageImports: ['lucide-react'],
+
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/start",
+        permanent: false,
+      },
+    ];
   },
 };
 

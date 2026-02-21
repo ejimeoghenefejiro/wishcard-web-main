@@ -19,7 +19,7 @@ export type User = {
 type AuthContextType = {
   user: User | null;
   loading: boolean;
-  login: () => void;
+  login: (callbackUrl?: string) => void;
   logout: () => Promise<void>;
   refetchUser: () => Promise<void>;
   incrementUsage: () => Promise<void>;
@@ -66,8 +66,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
     : null;
 
-  const login = () => {
-    signIn("google", { callbackUrl: "/profile" });
+  const login = (callbackUrl = "/profile") => {
+    signIn("google", { callbackUrl });
   };
 
   const logout = async () => {
